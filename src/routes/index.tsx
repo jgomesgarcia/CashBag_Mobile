@@ -1,15 +1,13 @@
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 
-import MainRoutes from "./Main.routes";
-import TransactionRoutes from "./Transaction.routes";
+import MainRoutes from './Main.routes';
 
 const Routes: React.FC = () => {
-    return (
-        <NavigationContainer>
-            <MainRoutes />
-            <TransactionRoutes />
-        </NavigationContainer>
-    )
-}
+  return (
+    <NavigationContainer>
+      <MainRoutes />
+    </NavigationContainer>
+  );
+};
 
-export default Routes
+export default Routes;

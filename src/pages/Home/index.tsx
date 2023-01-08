@@ -6,7 +6,7 @@ import { View } from 'react-native';
 const Home: React.FC = () => {
     return(
         <View>
-            <Text>Home</Text>
+            <Text>Homes</Text>
         </View>
     )
 }

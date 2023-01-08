@@ -1,20 +1,14 @@
+import React from "react";
 
+import { Container } from "./styles";
+import Routes from "../../routes";
 
-import React from 'react';
-import {
-  Text,
-} from 'react-native';
-
-import { Container } from './styles';
-import Routes from '../../routes'
-
-const App:React.FC = () => {
+const App: React.FC = () => {
   return (
     <Container>
-      <Routes />
+        <Routes />
     </Container>
   );
 };
-
 
 export default App;
