@@ -3,12 +3,12 @@ import React from 'react'
 
 import { View } from 'react-native';
 
-const Perfil: React.FC = () => {
+const PayerViewer: React.FC<any> = () => {
     return(
         <View>
-            <Text>Perfil</Text>
+            <Text>dfsdfsdf</Text>
         </View>
     )
 }
 
-export default Perfil
+export default PayerViewer

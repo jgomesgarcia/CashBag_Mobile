@@ -1,13 +1,12 @@
 import React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Planning from '../pages/Planning';
-import Perfil from "../pages/Perfil";
+import PayerCreator from "../pages/PayerCreator";
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
 
-const PlanningRoutes: React.FC = () => {
+const SignInRoutes: React.FC<any> = () => {
   return (
     <Navigator
       screenOptions={{
@@ -15,14 +14,14 @@ const PlanningRoutes: React.FC = () => {
       }}
     >
       <Screen
-        name="Planning"
-        component={Planning}
+        name="Payer/Create"
+        component={PayerCreator}
         options={{
         }}
       />
       <Screen
-        name="Perfil2"
-        component={Perfil}
+        name="Payer/View"
+        component={PayerCreator}
         options={{
         }}
       />
@@ -30,4 +29,4 @@ const PlanningRoutes: React.FC = () => {
   );
 };
 
-export default PlanningRoutes
+export default SignInRoutes

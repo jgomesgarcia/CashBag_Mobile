@@ -3,7 +3,7 @@ import React from 'react'
 
 import { View } from 'react-native';
 
-const Payers: React.FC = () => {
+const PayerCreator: React.FC<any> = () => {
     return(
         <View>
             <Text>dfsdfsdf</Text>
@@ -11,4 +11,4 @@ const Payers: React.FC = () => {
     )
 }
 
-export default Payers
+export default PayerCreator

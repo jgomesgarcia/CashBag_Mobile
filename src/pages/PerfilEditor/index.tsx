@@ -3,12 +3,12 @@ import React from 'react'
 
 import { View } from 'react-native';
 
-const Home: React.FC<any> = () => {
+const PerfilEditor: React.FC<any> = () => {
     return(
         <View>
-            <Text>Homes</Text>
+            <Text>Perfil</Text>
         </View>
     )
 }
 
-export default Home
+export default PerfilEditor

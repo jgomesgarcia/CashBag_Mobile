@@ -1,9 +1,9 @@
 import { Text } from '@react-native-material/core';
-import React from 'react'
+import React from 'react';
 
 import { View, Button } from 'react-native';
 
-const Planning: React.FC = ({ navigation }) => {
+const CycleEditor: React.FC<any> = ({ navigation }) => {
     return (
         <View>
             <Text>Planning</Text>
@@ -13,7 +13,7 @@ const Planning: React.FC = ({ navigation }) => {
                 onPress={() => navigation.navigate('Perfil2')}
             />
         </View>
-    )
-}
+    );
+};
 
-export default Planning
+export default CycleEditor;

@@ -1,78 +1,57 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import PlanningRoutes from './Planning.routes';
-import Home from '../pages/Home';
-import Perfil from '../pages/Perfil';
-import Payers from '../pages/Payers';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import ButtonNew from '../components/ButtonNew';
-import MenuNew from '../components/MenuNew';
+import HomeRoutes from './Home.routes';
+import PayerRoutes from './Payer.routes';
+import PerfilRoutes from './Perfil.routes';
+import CycleRoutes from './Cycle.routes';
+import { ERoutes } from '.';
+import SignInRoutes from './SignIn.routes';
+import TransactionRoutes from './Transaction.routes';
 
-const { Screen, Navigator, Group } = createBottomTabNavigator();
+const { Screen, Navigator } = createNativeStackNavigator();
 
 const MainRoutes: React.FC = () => {
   return (
     <Navigator
-
       screenOptions={{
-        tabBarStyle: {
-          backgroundColor: '#121212',
-          borderColor: 'transparent',
-        },
-        tabBarActiveTintColor: "white",
-        headerShown: false
+        headerShown: false,
       }}
     >
       <Screen
-        name="Home"
-        component={Home}
+        name={ERoutes.HomeRoutes}
+        component={HomeRoutes}
         options={{
-          title: "Início",
-          tabBarIcon: ({ size, color }) => (
-            <Icon name='home' size={size} color={color} />
-          )
         }}
       />
       <Screen
-        name="Planning"
-        component={PlanningRoutes}
+        name={ERoutes.CycleRoutes}
+        component={CycleRoutes}
         options={{
-          title: "Planejamento",
-          tabBarIcon: ({ size, color }) => (
-            <Icon name='calendar-multiselect' size={size} color={color} />
-          )
         }}
       />
       <Screen
-        name="MenuNew"
-        component={MenuNew}
+        name={ERoutes.PayerRoutes}
+        component={PayerRoutes}
         options={{
-          tabBarLabel: '',
-          presentation: 'tranparentModal',
-          tabBarIcon: ({ size, focused }) => (
-            <ButtonNew size={size} focused={focused} />
-          )
         }}
       />
       <Screen
-        name="Payers"
-        component={Payers}
+        name={ERoutes.PerfilRoutes}
+        component={PerfilRoutes}
         options={{
-          title: "Entidades",
-          tabBarIcon: ({ size, color }) => (
-            <Icon name='book' size={size} color={color} />
-          )
         }}
       />
       <Screen
-        name="Perfil"
-        component={Perfil}
+        name={ERoutes.SignInRoutes}
+        component={SignInRoutes}
         options={{
-          title: "Perfil",
-          tabBarIcon: ({ size, color }) => (
-            <Icon name='account' size={size} color={color} />
-          )
+        }}
+      />
+      <Screen
+        name={ERoutes.TransactionRoutes}
+        component={TransactionRoutes}
+        options={{
         }}
       />
     </Navigator>
