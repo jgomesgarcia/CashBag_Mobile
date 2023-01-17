@@ -10,7 +10,7 @@
     "types": [
       "@types/styled-components-react-native"
     ],
-    "esModuleInterop": true
+    "esModuleInterop": true,
   }
 
 }
